@@ -1,0 +1,21 @@
+🧠 Relation Model for this Level
+
+✔ Restaurant
+
+    id
+
+    name
+
+    location
+
+✔ Food
+
+    id
+
+    name
+
+    price
+
+    category
+
+    restaurantId (Foreign Key)

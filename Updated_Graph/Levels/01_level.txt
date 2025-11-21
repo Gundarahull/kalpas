@@ -1,0 +1,27 @@
+🔥 GraphQL = Buffet
+
+You take exactly what you want.
+
+I want: dal, rice, and 1 sweet.
+
+
+GraphQL gives only that — nothing extra, nothing less.
+
+
+🧠 2. Key Terms (Very Simple)
+✔ Schema
+
+The “menu card”.
+Defines what fields exist.
+
+✔ Query
+
+Ask for data.
+
+✔ Mutation
+
+Change/create/delete data.
+
+✔ Resolver
+
+The chef who prepares the exact food you asked.
