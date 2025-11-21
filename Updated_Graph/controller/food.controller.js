@@ -9,6 +9,19 @@ const getFood = (id) => {
   return null;
 };
 
+const addFood = (data) => {
+  const newItem = {
+    id: foods.length + 1,
+    name: data.name,
+    price: data.price,
+    category: data.category,
+    rating: data.rating,
+  };
+  foods.push(newItem);
+  return foods[foods.length - 1];
+};
+
 module.exports = {
   getFood,
+  addFood,
 };

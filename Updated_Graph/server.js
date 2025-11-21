@@ -5,24 +5,26 @@ const resolvers = require("./graphQl/resolvers");
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: async ({ req }) => {
+  context: async ({ req, res }) => {
     let user = null;
     const auth = req.headers.authorization;
     if (auth === "huii") {
       user = {
         id: 1,
         name: "rahul",
-        role:"superAdmin"
+        role: "superAdmin",
       };
     }
     if (auth === "zuii") {
       user = {
         id: 2,
         name: "looser",
-        role:"admin"
+        role: "admin",
       };
     }
     return {
+      req,
+      res,
       user,
     };
   },

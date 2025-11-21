@@ -1,7 +1,7 @@
 const { ForbiddenError, AuthenticationError } = require("apollo-server");
 
 const authentication = (parent, args, context, info, next) => {
-  if (!context.user) {
+  if (!context.user) {    
     throw new AuthenticationError("Authentication required");
   }
   return next();
