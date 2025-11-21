@@ -21,4 +21,18 @@ function runMiddleware(middlewares, resolver) {
   };
 }
 
+// secured() -> dispatch(0) -> middleware1.pre
+//                |
+//                -> middleware1 awaits next -> dispatch(1) -> middleware2.pre
+//                    |
+//                    -> middleware2 awaits next -> dispatch(2) -> middleware3.pre
+//                        |
+//                        -> middleware3 awaits next -> dispatch(3) -> resolver runs
+//                        <- middleware3 post
+//                    <- middleware2 post
+//                <- middleware1 post
+// return final result
+
+
 module.exports = { runMiddleware };
+
